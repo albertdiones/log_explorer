@@ -1,8 +1,13 @@
 #!/bin/sh
 
-# Prompt the user for input
-echo "Input the date you want to search (e.g., YYYY-MM-DD):"
-read INPUT_DATE
+# Check if a second parameter (date) is supplied
+if [ -z "$2" ]; then
+    # Prompt the user for input
+    echo "Input the date you want to search (e.g., YYYY-MM-DD):"
+    read INPUT_DATE
+else
+    INPUT_DATE="$2"
+fi
 
 echo "Input the time you want to search (optional, e.g., HH:MM in 24-hour format):"
 read INPUT_TIME
@@ -26,9 +31,6 @@ if [ -z "$1" ]; then
     echo "Usage: $0 <logfile>"
     exit 1
 fi
-
-
-echo $SEARCH
 
 # Perform the search
 grep -E "$SEARCH" "$1"

@@ -9,8 +9,14 @@ else
     INPUT_DATE="$2"
 fi
 
-echo "Input the time you want to search (optional, e.g., HH:MM in 24-hour format):"
-read INPUT_TIME
+if [ -z "$3" ]; then
+    echo "Input the time you want to search (optional, e.g., HH:MM:SS in 24-hour format):"
+    read INPUT_TIME
+else
+    INPUT_TIME="$3"
+fi
+
+
 
 # Convert the input date to the desired format (MM/DD/YYYY)
 DATE=$(date -d "$INPUT_DATE" '+%m/%-d/%Y')

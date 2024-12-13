@@ -23,8 +23,23 @@ DATE=$(date -d "$INPUT_DATE" '+%m/%-d/%Y')
 
 # Convert the input time to 12-hour format with AM/PM
 if [ -n "$INPUT_TIME" ]; then
-    TIME=$(date -d "$INPUT_TIME" '+%-I:%M:%S %p')
+    TIME=$(date -d "$INPUT_TIME" '+%-I:%M')
 fi
+
+# 06:20
+COLON_COUNT=$(echo "$INPUT_TIME" | grep -o ":" | wc -l);
+
+#echo "COLON_COUNT: $COLON_COUNT"
+# cr: SOGEKING
+if [ "$COLON_COUNT" -eq 1 ]; then
+    TIME="$TIME:[0-9]{2}";
+else
+    # 06:20:15
+    TIME="$TIME:$(date -d "$INPUT_TIME" '+%S')"
+fi
+
+# AM/PM
+TIME="$TIME $(date -d "$INPUT_TIME" '+%p')"
 
 # Format the date and time to match the log format
 SEARCH="^\\[$DATE"
@@ -37,6 +52,8 @@ if [ -z "$1" ]; then
     echo "Usage: $0 <logfile>"
     exit 1
 fi
+
+echo "search: $SEARCH"
 
 # Perform the search
 grep -E "$SEARCH" "$1"

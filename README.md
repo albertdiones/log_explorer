@@ -10,3 +10,15 @@ Todos:
 scratch:
 grep -E "^\[12/7/2024, 6\:[0-9]{2}:[0-9]{2} AM" logs/all.debug.20241206T203828265Z.txt
 tail(grep())
+
+
+[12/7/2024, 6:20:15 AM] [strategy_scans] [info] tGTXUSD did not match strategy: EMA99 5m Breakout (Short) v3b
+[12/7/2024, 6:20:15 AM] [strategy_scans] [info] tALGUSD did not match strategy: EMA99 5m Breakout (Short) v3b
+[12/7/2024, 6:20:15 AM] [strategy_scans] [info] tUOSUSD did not match strategy: EMA99 5m Breakout (Short) v3b
+[12/7/2024, 6:20:15 AM] [strategy_scans] [info] tAMPUSD did not match strategy: EMA99 5m Breakout (Short) v3b
+[12/7/2024, 6:20:15 AM] [repeater_entry] [debug] Run successful (19935)
+[12/7/2024, 6:20:15 AM] [repeater_entry] [debug] sleeping for 200 ms...
+[12/7/2024, 6:20:15 AM] [repeater_ordering] [debug] Run successful (8914)
+[12/7/2024, 6:20:15 AM] [repeater_ordering] [debug] sleeping for 500 ms...
+[12/7/2024, 6:20:15 AM] [repeater_entered] [debug] Run successful (1141)
+[12/7/2024, 6:20:15 AM] [repeater_entered] [debug] sleeping for 5000 ms...

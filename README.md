@@ -5,7 +5,8 @@ Todos:
  * [x] filtering by date
  * [ ] arrow keys controlled log exploration
  * [ ] up/down scroll up/down of the log
- * [ ] left/right go to next minute/hour
+ * [x] left/right go to next minute/hour
+ * [ ] fix: left/right on midnight
  * [ ] .env based date and time format
  * [ ] filtering by text
 

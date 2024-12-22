@@ -6,6 +6,7 @@ Todos:
  * [ ] arrow keys controlled log exploration
  * [ ] up/down scroll up/down of the log
  * [x] left/right go to next minute/hour
+ * [ ] message when loading is done and the result is blank
  * [ ] fix: left/right on midnight
  * [ ] .env based date and time format
  * [ ] filtering by text

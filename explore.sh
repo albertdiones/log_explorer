@@ -17,7 +17,7 @@ while true; do
       "[D")
         clear
         UNIX_TIMESTAMP=$(($UNIX_TIMESTAMP-60))
-        NEW_TIME=$(date -d "@$UNIX_TIMESTAMP" '+%I:%M')
+        NEW_TIME=$(date -d "@$UNIX_TIMESTAMP" '+%H:%M')
         ./search-by-minute.sh $1 $2 $NEW_TIME
         ;;
       "[C")
@@ -25,7 +25,7 @@ while true; do
         UNIX_TIMESTAMP=$(($UNIX_TIMESTAMP+60))
         #echo $(($UNIX_TIMESTAMP-60))        
 
-        NEW_TIME=$(date -d "@$UNIX_TIMESTAMP" '+%I:%M')
+        NEW_TIME=$(date -d "@$UNIX_TIMESTAMP" '+%H%M')
         ./search-by-minute.sh $1 $2 $NEW_TIME
         ;;
     esac
